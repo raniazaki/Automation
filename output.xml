@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200916 23:44:38.464" generator="Robot 3.2.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/mabbas/PycharmProjects/Automating-Sign-up-process/TestCases/invalid_signup.robot" id="s1" name="Invalid Signup">
+<kw type="setup" name="Open Browser To Home Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200916 23:44:38.687" level="INFO">Opening browser 'Firefox' to base url 'https://www.phptravels.net/'.</msg>
+<msg timestamp="20200916 23:44:38.689" level="INFO">Firefox driver log is always forced to to: /Users/mabbas/PycharmProjects/Automating-Sign-up-process/geckodriver-29.log</msg>
+<status status="PASS" endtime="20200916 23:44:51.536" starttime="20200916 23:44:38.686"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200916 23:44:52.016" starttime="20200916 23:44:51.536"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20200916 23:44:52.018" starttime="20200916 23:44:52.017"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@class='dropdown dropdown-login dropdown-tab']//a[@id='dropdownCurrency']</arg>
+</arguments>
+<msg timestamp="20200916 23:44:52.018" level="INFO">Clicking element 'xpath://div[@class='dropdown dropdown-login dropdown-tab']//a[@id='dropdownCurrency']'.</msg>
+<status status="PASS" endtime="20200916 23:44:54.273" starttime="20200916 23:44:52.018"></status>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class='dropdown-item tr']</arg>
+</arguments>
+<msg timestamp="20200916 23:44:54.274" level="INFO">Simulating Mouse Down on element 'xpath://a[@class='dropdown-item tr']'.</msg>
+<status status="PASS" endtime="20200916 23:44:56.567" starttime="20200916 23:44:54.274"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class='dropdown-item tr']</arg>
+</arguments>
+<msg timestamp="20200916 23:44:56.568" level="INFO">Clicking element 'xpath://a[@class='dropdown-item tr']'.</msg>
+<status status="PASS" endtime="20200916 23:45:00.490" starttime="20200916 23:44:56.568"></status>
+</kw>
+<kw name="Register Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Register</arg>
+</arguments>
+<msg timestamp="20200916 23:45:01.498" level="INFO">Page title is 'Register'.</msg>
+<status status="PASS" endtime="20200916 23:45:01.499" starttime="20200916 23:45:00.491"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:01.499" starttime="20200916 23:45:00.490"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:01.499" starttime="20200916 23:44:38.686"></status>
+</kw>
+<test id="s1-t1" name="Invalid password">
+<kw type="setup" name="Go To Signup Page" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${SIGNUP URL}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:01.502" level="INFO">Opening url 'https://www.phptravels.net//register'</msg>
+<status status="PASS" endtime="20200916 23:45:04.257" starttime="20200916 23:45:01.502"></status>
+</kw>
+<kw name="Register Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Register</arg>
+</arguments>
+<msg timestamp="20200916 23:45:05.265" level="INFO">Page title is 'Register'.</msg>
+<status status="PASS" endtime="20200916 23:45:05.266" starttime="20200916 23:45:04.258"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:05.266" starttime="20200916 23:45:04.257"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:05.266" starttime="20200916 23:45:01.501"></status>
+</kw>
+<kw name="Invalid Sign up process" library="resource">
+<kw name="Input WrongFN" library="resource">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>5</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${LFN}</var>
+</assign>
+<msg timestamp="20200916 23:45:05.269" level="INFO">${LFN} = fbmtl</msg>
+<status status="PASS" endtime="20200916 23:45:05.269" starttime="20200916 23:45:05.268"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${LFN}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:05.270" level="INFO">${LFN} = fbmtl</msg>
+<status status="PASS" endtime="20200916 23:45:05.270" starttime="20200916 23:45:05.269"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='login']//div[1]//div[1]//label[1]//input[1]</arg>
+<arg>${LFN}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:05.270" level="INFO">Typing text 'fbmtl' into text field 'xpath://div[@id='login']//div[1]//div[1]//label[1]//input[1]'.</msg>
+<status status="PASS" endtime="20200916 23:45:08.341" starttime="20200916 23:45:05.270"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:08.341" starttime="20200916 23:45:05.267"></status>
+</kw>
+<kw name="Input WrongLN" library="resource">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>5</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${LLN}</var>
+</assign>
+<msg timestamp="20200916 23:45:08.342" level="INFO">${LLN} = vgmfl</msg>
+<status status="PASS" endtime="20200916 23:45:08.343" starttime="20200916 23:45:08.342"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${LLN}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:08.344" level="INFO">${LLN} = vgmfl</msg>
+<status status="PASS" endtime="20200916 23:45:08.344" starttime="20200916 23:45:08.343"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="headersignupform"]/div[3]/div[2]/div/label/input</arg>
+<arg>${LLN}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:08.344" level="INFO">Typing text 'vgmfl' into text field 'xpath://*[@id="headersignupform"]/div[3]/div[2]/div/label/input'.</msg>
+<status status="PASS" endtime="20200916 23:45:11.400" starttime="20200916 23:45:08.344"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:11.400" starttime="20200916 23:45:08.341"></status>
+</kw>
+<kw name="Input mobile" library="resource">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>7</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${mobile1}</var>
+</assign>
+<msg timestamp="20200916 23:45:11.402" level="INFO">${mobile1} = 2726979</msg>
+<status status="PASS" endtime="20200916 23:45:11.402" starttime="20200916 23:45:11.401"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>010${mobile1}</arg>
+</arguments>
+<assign>
+<var>${mobile}</var>
+</assign>
+<msg timestamp="20200916 23:45:11.403" level="INFO">${mobile} = 0102726979</msg>
+<status status="PASS" endtime="20200916 23:45:11.403" starttime="20200916 23:45:11.402"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[4]//label[1]//input[1]</arg>
+<arg>${mobile}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:11.404" level="INFO">Typing text '0102726979' into text field 'xpath://div[4]//label[1]//input[1]'.</msg>
+<status status="PASS" endtime="20200916 23:45:14.457" starttime="20200916 23:45:11.403"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:14.457" starttime="20200916 23:45:11.400"></status>
+</kw>
+<kw name="Input Wemail" library="resource">
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=.</arg>
+<arg>${LFN}</arg>
+<arg>${LLN}@gmail.com</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20200916 23:45:14.459" level="INFO">${email} = fbmtl.vgmfl@gmail.com</msg>
+<status status="PASS" endtime="20200916 23:45:14.459" starttime="20200916 23:45:14.458"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[5]//label[1]//input[1]</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:14.459" level="INFO">Typing text 'fbmtl.vgmfl@gmail.com' into text field 'xpath://div[5]//label[1]//input[1]'.</msg>
+<status status="PASS" endtime="20200916 23:45:17.525" starttime="20200916 23:45:14.459"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:17.525" starttime="20200916 23:45:14.457"></status>
+</kw>
+<kw name="Input wrong password" library="resource">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${password1}</var>
+</assign>
+<msg timestamp="20200916 23:45:17.526" level="INFO">${password1} = bjFjbzDIE4</msg>
+<status status="PASS" endtime="20200916 23:45:17.527" starttime="20200916 23:45:17.526"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${password1}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:17.528" level="INFO">${password1} = bjFjbzDIE4</msg>
+<status status="PASS" endtime="20200916 23:45:17.528" starttime="20200916 23:45:17.527"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[6]//label[1]//input[1]</arg>
+<arg>${password1}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:17.528" level="INFO">Typing text 'bjFjbzDIE4' into text field 'xpath://div[6]//label[1]//input[1]'.</msg>
+<status status="PASS" endtime="20200916 23:45:20.580" starttime="20200916 23:45:17.528"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[7]//label[1]//input[1]</arg>
+<arg>${password1}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:20.581" level="INFO">Typing text 'bjFjbzDIE4' into text field 'xpath://div[7]//label[1]//input[1]'.</msg>
+<status status="PASS" endtime="20200916 23:45:23.627" starttime="20200916 23:45:20.580"></status>
+</kw>
+<status status="PASS" endtime="20200916 23:45:23.628" starttime="20200916 23:45:17.525"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Sign Up</arg>
+</arguments>
+<msg timestamp="20200916 23:45:23.628" level="INFO">Clicking button 'Sign Up'.</msg>
+<status status="PASS" endtime="20200916 23:45:27.887" starttime="20200916 23:45:23.628"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${Account URL}</arg>
+</arguments>
+<msg timestamp="20200916 23:45:27.888" level="INFO">Opening url 'https://www.phptravels.net//account'</msg>
+<status status="PASS" endtime="20200916 23:45:30.637" starttime="20200916 23:45:27.887"></status>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<arguments>
+<arg>tag:h3</arg>
+<arg>${LLN}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200916 23:45:33.899" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200916 23:45:33.899" starttime="20200916 23:45:32.661"></status>
+</kw>
+<msg timestamp="20200916 23:45:33.904" level="FAIL">Element 'tag:h3' should not contain text 'vgmfl' but it did.</msg>
+<status status="FAIL" endtime="20200916 23:45:33.905" starttime="20200916 23:45:30.638"></status>
+</kw>
+<status status="FAIL" endtime="20200916 23:45:33.905" starttime="20200916 23:45:05.267"></status>
+</kw>
+<status status="FAIL" endtime="20200916 23:45:33.905" critical="yes" starttime="20200916 23:45:01.500">Element 'tag:h3' should not contain text 'vgmfl' but it did.</status>
+</test>
+<doc>A test suite containing tests related to invalid login.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="FAIL" endtime="20200916 23:45:33.906" starttime="20200916 23:44:38.467"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Invalid Signup" pass="0">Invalid Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

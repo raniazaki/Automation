@@ -1,5 +1,3 @@
-# AutomatingSignUpProcess
-This repo describes sign up process using automation testing. 
 ## by using Robot framework with python libraries I automate the signup page of "https://www.phptravels.net" 
 
 
@@ -21,8 +19,7 @@ My Project files(Acceptance testing):
                
 
 ##Prerequisit:
-
-before using this code you should install:
+before using this code you should download:
 
 1-robot framework 
 2-selenium libraries 
