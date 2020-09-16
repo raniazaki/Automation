@@ -19,8 +19,9 @@ My Project files(Acceptance testing):
                
 
 ##Prerequisit:
-before using this code you should Installed:
+before using this code you should install the following libraries:
 
-1. robot framework 
-2. selenium libraries 
-3. python libraries
+1. robotframework 
+2. robotframework-seleniumlibrary
+3. robotframework-seleniumscreenshots
+4. selenium
