@@ -19,8 +19,7 @@ My Project files(Acceptance testing):
                
 
 ##Prerequisit:
-before using this code you should download:
-
+before using this code you should Installed:
 1-robot framework 
 2-selenium libraries 
 3-python libraries
